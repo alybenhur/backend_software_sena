@@ -30,7 +30,7 @@ import { Roles, Public } from '../common/decorators/auth.decorator';
 import { UserRole } from '../common/enums/user-role.enum';
 
 @ApiTags('Software')
-//@UseGuards(JwtAuthGuard, RolesGuard)
+@UseGuards(JwtAuthGuard, RolesGuard)
 @Controller('software')
 export class SoftwareController {
   constructor(private readonly softwareService: SoftwareService) {}
@@ -52,7 +52,7 @@ export class SoftwareController {
 
   // ─── POST /software/:id/imagenes ──────────────────────────────────────────
 @Post(':id/imagenes')
-//@Roles(UserRole.SUPER_ADMIN)
+@Roles(UserRole.SUPER_ADMIN)
 @ApiBearerAuth()
 @UseInterceptors(FilesInterceptor('imagenes', 10))
 @ApiConsumes('multipart/form-data')
