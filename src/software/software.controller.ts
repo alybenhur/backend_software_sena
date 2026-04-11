@@ -37,7 +37,7 @@ export class SoftwareController {
 
   // ─── POST /software ───────────────────────────────────────────────────────
   @Post()
-  //@Roles(UserRole.SUPER_ADMIN)
+  @Roles(UserRole.SUPER_ADMIN)
   @ApiBearerAuth()
   @UseInterceptors(FilesInterceptor('imagenes', 10))
   @ApiConsumes('multipart/form-data')
