@@ -14,6 +14,7 @@ import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { SoftwareModule } from './software/software.module';
 import { CloudinaryModule } from './cloudinary/cloudinary.module';
+import { NoticiasModule } from './noticias/noticias.module';
 
 @Module({
   imports: [
@@ -44,7 +45,8 @@ import { CloudinaryModule } from './cloudinary/cloudinary.module';
      AuthModule,
     UserModule,
     SoftwareModule,
-    CloudinaryModule
+    CloudinaryModule,
+    NoticiasModule,
 
   ],
   controllers: [AppController],

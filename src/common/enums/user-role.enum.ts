@@ -8,3 +8,9 @@ export enum SoftwareStatus {
   ACTIVO = 'activo',
   INACTIVO = 'inactivo',
 }
+
+export enum NoticiaEstado {
+  PENDIENTE = 'pendiente',
+  APROBADA = 'aprobada',
+  RECHAZADA = 'rechazada',
+}
