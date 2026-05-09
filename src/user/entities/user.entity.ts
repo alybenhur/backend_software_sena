@@ -41,7 +41,11 @@ export class User {
   @Column({ default: true })
   isActive: boolean;
 
+  @Column({ nullable: true, type: 'varchar' })
+  resetCode: string | null;
 
+  @Column({ nullable: true, type: 'datetime' })
+  resetCodeExpiry: Date | null;
 
   @CreateDateColumn()
   createdAt: Date;
